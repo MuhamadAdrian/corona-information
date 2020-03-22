@@ -10,14 +10,14 @@
 
 <template>
   <div class="home">
-    <h1 class="headline font-weight-thin subtitle-1">Graphic</h1>
+    <h1 class="headline font-weight-thin subtitle-1">Graphic <v-icon right>mdi-chart-pie</v-icon></h1>
     <v-row>
       <v-col md="6" cols="12">
           <chart-corona-virus></chart-corona-virus>
           <p class="caption text-center">Press the chart for more</p>
       </v-col>
       <v-col md="6" cols="12"> 
-        <h1 class="headline font-weight-thin subtitle-1">Data</h1>
+        <h1 class="headline font-weight-thin subtitle-1 mb-2">Data <v-icon>mdi-chart-donut</v-icon></h1>
         <v-skeleton-loader
           :loading="loading"
           :transition="transition"
@@ -27,7 +27,7 @@
         <v-card outlined class="mx-auto my-card">
           <v-card-text class="d-flex align-center">
             <div>
-              <p class="title mb-0">Dunia</p>
+              <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Kasus</p>
             </div>
             <v-spacer></v-spacer>
@@ -45,7 +45,7 @@
         <v-card outlined class="mx-auto my-card mt-3">
           <v-card-text class="d-flex align-center">
             <div>
-              <p class="title mb-0">Dunia</p>
+              <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Pulih</p>
             </div>
             <v-spacer></v-spacer>
@@ -63,7 +63,7 @@
         <v-card outlined class="mx-auto my-card mt-3">
           <v-card-text class="d-flex align-center">
             <div>
-              <p class="title mb-0">Dunia</p>
+              <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Meninggal</p>
             </div>
             <v-spacer></v-spacer>

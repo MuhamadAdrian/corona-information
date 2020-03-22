@@ -31,8 +31,8 @@ export default {
             show: false,
             items: [
                 {text: 'Global', icon: 'mdi-earth', link: '/'},
-                {text: 'Countries', icon: 'mdi-flag', link: '/countries'},
-                {text: 'About', icon: 'mdi-help', link: '/about'},
+                {text: 'Countries', icon: 'mdi-flag-outline', link: '/countries'},
+                {text: 'About', icon: 'mdi-information-outline', link: '/about'},
             ]
         }
     },

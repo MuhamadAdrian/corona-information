@@ -22,7 +22,7 @@
         <v-row>
             <v-col class="pb-sm-2 pb-0" v-for="(data, index) in filteredCountry" :key="index" md="3" cols="12">
                 <v-skeleton-loader :loading="loading" :transition="transition" type="list-item-three-line">
-                <v-card flat class="mb-0">
+                <v-card flat class="mb-0" :to="'/countries/' + data.country">
                     <v-card-text>                        
                         <p class="mb-0 body-1 font-weight-medium">{{ data.country }}</p>
                         <p class="mb-0">Kasus : {{ data.cases }} | Meniggal Hari ini : {{ data.todayDeaths }}</p>

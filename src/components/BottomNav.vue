@@ -13,12 +13,12 @@
 
     <v-btn to="/countries">
       <span>Countries</span>
-      <v-icon>mdi-flag</v-icon>
+      <v-icon>mdi-flag-outline</v-icon>
     </v-btn>
 
     <v-btn to="/about">
       <span>About</span>
-      <v-icon>mdi-help</v-icon>
+      <v-icon>mdi-information-outline</v-icon>
     </v-btn>
   </v-bottom-navigation>
 </template>

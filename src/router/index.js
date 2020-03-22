@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Countries from '../views/Countries.vue'
+import CountriesDetail from '../views/CountriesDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,12 @@ const routes = [
     path: '/countries',
     name: 'Countries',
     component: Countries,
+    meta: { transitionName: 'slide' },
+  },
+  {
+    path: '/countries/:country',
+    name: 'Countries',
+    component: CountriesDetail,
     meta: { transitionName: 'slide' },
   },
   {

@@ -3,36 +3,53 @@
     border: 2px solid #1ca0ff !important;
     background: transparent !important;
   }
+  .my-shadow{
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.13) !important;
+  }
   .text-blue{
     color: #1ca0ff;
+  }
+  .my-shadow2{
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.034) !important;
   }
 </style>
 
 <template>
   <div class="home">
-    <h1 class="headline font-weight-thin subtitle-1">Graphic <v-icon right>mdi-chart-pie</v-icon></h1>
     <v-row>
-      <v-col md="6" cols="12">
+      <v-col cols="12">
+        <div class="text-center">
+          <h1 class="font-weight-light display-1">Pantau Corona</h1>
+          <p class="subtitle-1 font-weight-light">Data Virus Corona Global & Live Data Indonesia</p>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+    <v-col md="6" cols="12">
+          <h1 class="headline font-weight-thin subtitle-1 mb-3">Graphic <v-icon right color="teal">mdi-chart-pie</v-icon></h1>
+      <v-card flat class="my-shadow2 py-5">
           <chart-corona-virus></chart-corona-virus>
-          <p class="caption text-center">Press the chart for more</p>
+          <p class="caption text-center mt-3 mb-0">Press the chart for more</p>
+      </v-card>
+
       </v-col>
       <v-col md="6" cols="12"> 
-        <h1 class="headline font-weight-thin subtitle-1 mb-2">Data <v-icon>mdi-chart-donut</v-icon></h1>
+        <h1 class="headline font-weight-thin subtitle-1 mb-3">Data <v-icon color="blue">mdi-chart-donut</v-icon></h1>
         <v-skeleton-loader
           :loading="loading"
           :transition="transition"
           height="94"
           type="list-item-two-line"
         >
-        <v-card outlined class="mx-auto my-card">
-          <v-card-text class="d-flex align-center">
+        <v-card color="blue" flat class="mx-auto my-shadow">
+          <v-card-text class="d-flex align-center white--text">
             <div>
               <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Kasus</p>
             </div>
             <v-spacer></v-spacer>
-            <v-icon left>mdi-phone-in-talk</v-icon>
-            <p class="title font-weight-light text-blue mb-0">{{ this.value.cases | numFormat }} Kasus</p>
+            <v-icon color="white" left>mdi-phone-in-talk</v-icon>
+            <p class="white--text title font-weight-light mb-0">{{ this.value.cases | numFormat }} Kasus</p>
           </v-card-text>
         </v-card>
         </v-skeleton-loader>
@@ -42,15 +59,15 @@
           height="94"
           type="list-item-two-line"
         >
-        <v-card outlined class="mx-auto my-card mt-3">
-          <v-card-text class="d-flex align-center">
+        <v-card color="teal" class="mx-auto my-shadow mt-3">
+          <v-card-text class="d-flex align-center white--text">
             <div>
               <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Pulih</p>
             </div>
             <v-spacer></v-spacer>
-            <v-icon left>mdi-refresh</v-icon>
-            <p class="title font-weight-light text-blue mb-0">{{ this.value.recovered | numFormat }} Pulih</p>
+            <v-icon color="white" left>mdi-refresh</v-icon>
+            <p class="title font-weight-light mb-0">{{ this.value.recovered | numFormat }} Pulih</p>
           </v-card-text>
         </v-card>
         </v-skeleton-loader>
@@ -60,15 +77,15 @@
           height="94"
           type="list-item-two-line"
         >
-        <v-card outlined class="mx-auto my-card mt-3">
-          <v-card-text class="d-flex align-center">
+        <v-card color="red" class="mx-auto my-shadow mt-3">
+          <v-card-text class="d-flex align-center white--text">
             <div>
               <p class="title mb-0">Global</p>
               <p class="subtitle-1 mb-0">Meninggal</p>
             </div>
             <v-spacer></v-spacer>
-            <v-icon left>mdi-bed</v-icon>
-            <p class="title font-weight-light text-blue mb-0">{{ this.value.deaths | numFormat }} Meninggal</p>
+            <v-icon left color="white">mdi-bed</v-icon>
+            <p class="title font-weight-light mb-0">{{ this.value.deaths | numFormat }} Meninggal</p>
           </v-card-text>
         </v-card>
         </v-skeleton-loader>
@@ -105,7 +122,8 @@ export default {
   methods: {
     loadData(){
       this.$Progress.start()
-      axios.get('https://coronavirus-19-api.herokuapp.com/all').then((response) => {
+      axios.get('https://coronavirus-19-api.herokuapp.com/all')
+      .then((response) => {
         this.value = response.data
         this.loading = false
         this.$Progress.finish()

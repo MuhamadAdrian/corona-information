@@ -1,6 +1,6 @@
 <style lang="css">
     .appbar-color-light{
-        background: #f9f9f9 !important;
+        background: #fafafa !important;
     }
     .slide-left-enter-active,
 .slide-left-leave-active,

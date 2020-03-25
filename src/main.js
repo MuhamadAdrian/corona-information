@@ -3,15 +3,22 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import VueProgressBar from 'vue-progressbar'
+import numeral from 'numeral';
+import numFormat from 'vue-filter-number-format';
+
 
 Vue.use(VueProgressBar, {
-  color: '#00A053',
+  color: '#2196F3',
   failedColor: 'red',
   height: '3px'
 })
 
-import numeral from 'numeral';
-import numFormat from 'vue-filter-number-format';
+Vue.filter('capitalize', function(text){
+  if(!text) return ''
+  text = text.toString()
+  return text.charAt(0).toUpperCase() + text.slice(1)
+})
+
  
 Vue.filter('numFormat', numFormat(numeral));
 

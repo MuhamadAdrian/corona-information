@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Countries from '../views/Countries.vue'
+import Patient from '../views/Patient.vue'
+import Hotline from '../views/Hotline.vue'
 import CountriesDetail from '../views/CountriesDetail.vue'
 
 Vue.use(VueRouter)
@@ -20,9 +22,21 @@ const routes = [
     meta: { transitionName: 'slide' },
   },
   {
+    path: '/hotline',
+    name: 'Hotline',
+    component: Hotline,
+    meta: { transitionName: 'slide' },
+  },
+  {
     path: '/countries/:country',
-    name: 'Countries',
+    name: 'CountriesDetail',
     component: CountriesDetail,
+    meta: { transitionName: 'slide' },
+  },
+  {
+    path: '/patient',
+    name: 'Patient',
+    component: Patient,
     meta: { transitionName: 'slide' },
   },
   {

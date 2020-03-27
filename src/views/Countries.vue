@@ -2,7 +2,7 @@
 <style lang="css">
     .sticky-top{
         position: sticky;
-        top: 8px;
+        top: 75px;
         z-index: 2;
     }
     .my-shadow3{
@@ -13,7 +13,7 @@
     <div>
         <v-text-field
         id="search"
-        class="sticky-top"
+        class="sticky-top mb-4 mb-sm-0"
         flat
         hide-details
         label="Cari Negara"
@@ -51,6 +51,8 @@ export default {
         return{
             size: '',
             allData: [],
+            statistic: [],
+            provinces: [],
             loading: true,
             transition: 'scale-transition',
             search: '',

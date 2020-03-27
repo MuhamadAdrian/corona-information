@@ -2,6 +2,9 @@
     .appbar-color-light{
         background: #fafafa !important;
     }
+    .bg-indigo{
+      background: #3F51B5 !important;
+    }
     .slide-left-enter-active,
 .slide-left-leave-active,
 .slide-right-enter-active,

@@ -1,7 +1,10 @@
 <template>
     <div>
-        <h1 class="text-center font-weight-light display-2 text--secondary mb-2">Corona Virus Hotline Indonesia</h1>
+        <div class="my-margin">
+            <h1 class="text-center font-weight-light display-2 text--secondary mb-2">Corona Virus Hotline Indonesia</h1>
         <p class="text-center">Layanan Telepon Darurat yang disediakan untuk menangani Virus Corona</p>
+        </div>
+        
         <v-row class="mb-5">
             <v-col md="3" sm="4" cols="12">
                 <v-card href="tel://119" class="pa-3 my-shadow2" height="170" flat>
@@ -90,3 +93,8 @@
         </v-row>
     </div>
 </template>
+<script>
+export default {
+    
+}
+</script>

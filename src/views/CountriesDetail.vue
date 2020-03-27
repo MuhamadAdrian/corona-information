@@ -2,7 +2,7 @@
     <div>
         <v-row>
             <v-col cols="3" class="pr-sm-2 pr-1 pb-sm-2 py-1">
-                <v-btn icon class="my-shadow3" text to="/countries" color="primary"><v-icon>mdi-keyboard-backspace</v-icon></v-btn>
+                <v-btn icon class="my-shadow3" text to="/countries" color="primary"><v-icon>mdi-keyboard-backspace</v-icon></v-btn><br>
             </v-col>
             <v-col cols="9" class="pl-sm-2 pl-1 pb-sm-2 py-1" justify-end>
                 <v-skeleton-loader
@@ -15,6 +15,11 @@
                     <h1 class="font-weight-light ml-auto">{{ singleData.country }}<v-icon right>mdi-flag</v-icon></h1>
                 </div>
                 </v-skeleton-loader>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col>
+                <v-btn class="my-shadow3" to="/countries/indonesia/kasus" color="primary"><v-icon left>mdi-arrow-right</v-icon>Lihat Kasus</v-btn>
             </v-col>
         </v-row>
         <v-row>

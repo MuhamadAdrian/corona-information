@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Countries from '../views/Countries.vue'
+import Provinces from '../views/Provinces.vue'
 import Patient from '../views/Patient.vue'
+import Kasus from '../views/Kasus.vue'
 import Hotline from '../views/Hotline.vue'
 import CountriesDetail from '../views/CountriesDetail.vue'
 
@@ -22,6 +24,12 @@ const routes = [
     meta: { transitionName: 'slide' },
   },
   {
+    path: '/countries/indonesia/kasus',
+    name: 'Kasus',
+    component: Kasus,
+    meta: { transitionName: 'slide' },
+  },
+  {
     path: '/hotline',
     name: 'Hotline',
     component: Hotline,
@@ -34,7 +42,13 @@ const routes = [
     meta: { transitionName: 'slide' },
   },
   {
-    path: '/patient',
+    path: '/provinces',
+    name: 'Provinces',
+    component: Provinces,
+    meta: { transitionName: 'slide' },
+  },
+  {
+    path: '/provinces/jawabarat/kasus',
     name: 'Patient',
     component: Patient,
     meta: { transitionName: 'slide' },

@@ -79,8 +79,8 @@
     shift
   >
     <v-btn @click="showAnimation()" class="px-0 btn" x-small to="/">
-      <v-icon small >mdi-earth</v-icon>
-      <span class="caption font-wight-light">Global</span>
+      <v-icon small >mdi-home-outline</v-icon>
+      <span class="caption font-wight-light">Home</span>
     </v-btn>
 
     <v-btn @click="showAnimation()" class="px-0 btn" x-small to="/countries">
@@ -93,9 +93,9 @@
       <span class="caption font-wight-light">Hotline</span>
     </v-btn>
 
-    <v-btn @click="showAnimation()" class="px-0 btn" x-small to="/patient">
-     <v-icon small >mdi-human</v-icon>
-      <span class="caption font-wight-light">Orang</span>
+    <v-btn @click="showAnimation()" class="px-0 btn" x-small to="/provinces">
+     <v-icon small >mdi-map-marker-multiple-outline</v-icon>
+      <span class="caption font-wight-light">Provinsi</span>
     </v-btn>
 
 

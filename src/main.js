@@ -5,6 +5,7 @@ import vuetify from './plugins/vuetify'
 import VueProgressBar from 'vue-progressbar'
 import numeral from 'numeral';
 import numFormat from 'vue-filter-number-format';
+import moment from 'moment'
 
 
 Vue.use(VueProgressBar, {
@@ -19,8 +20,18 @@ Vue.filter('capitalize', function(text){
   return text.charAt(0).toUpperCase() + text.slice(1)
 })
 
+Vue.filter('myDate', function(times){
+  return moment(times).format('LL')
+})
+
  
 Vue.filter('numFormat', numFormat(numeral));
+
+Vue.filter('persen', function(value){
+  return numeral(value).format('0.0')
+})
+
+
 
 const axios = require('axios').default;
 window.axios = axios;

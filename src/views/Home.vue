@@ -12,11 +12,14 @@
   .my-shadow2{
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.034) !important;
   }
+  .my-margin{
+    margin: 80px 0px;
+  }
 </style>
 
 <template>
   <div class="home">
-    <v-row>
+    <v-row class="my-margin">
       <v-col cols="12">
         <div class="text-center">
           <h1 class="font-weight-light display-1">Pantau Corona</h1>
@@ -26,15 +29,15 @@
     </v-row>
     <v-row>
     <v-col md="6" cols="12">
-          <h1 class="headline font-weight-thin subtitle-1 mb-3">Graphic <v-icon right color="teal">mdi-chart-pie</v-icon></h1>
-      <v-card flat class="my-shadow2 py-5">
+          <h1 class="headline font-weight-thin subtitle-1 mb-3">Global Graphic <v-icon right color="teal">mdi-chart-pie</v-icon></h1>
+      <v-card flat class="my-shadow2 py-5" color="light darken-3">
           <chart-corona-virus></chart-corona-virus>
           <p class="caption text-center mt-3 mb-0">Press the chart for more</p>
       </v-card>
 
       </v-col>
       <v-col md="6" cols="12"> 
-        <h1 class="headline font-weight-thin subtitle-1 mb-3">Data <v-icon color="blue">mdi-chart-donut</v-icon></h1>
+        <h1 class="headline font-weight-thin subtitle-1 mb-3">Data Global <v-icon color="blue">mdi-chart-donut</v-icon></h1>
         <v-skeleton-loader
           :loading="loading"
           :transition="transition"
@@ -91,7 +94,8 @@
         </v-skeleton-loader>
       </v-col>
     </v-row>
-    
+      <timelines></timelines>
+
   </div>
 </template>
 
@@ -99,10 +103,12 @@
 const axios = require('axios').default;
 // @ is an alias to /src
 import ChartCoronaVirus from '../components/Chart';
+import Timelines from '../components/Timelines'
 export default {
   name: 'Home',
   components: {
-    ChartCoronaVirus
+    ChartCoronaVirus,
+    Timelines
   },
   data() {
     return {
